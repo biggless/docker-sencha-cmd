@@ -1,5 +1,6 @@
 FROM ibmjava:latest
-RUN curl -Lo /tmp/cmd.run.zip http://cdn.sencha.com/cmd/6.5.0/no-jre/SenchaCmd-6.5.0-linux-amd64.sh.zip && \
+RUN apt-get install curl && \
+    curl -Lo /tmp/cmd.run.zip http://cdn.sencha.com/cmd/6.5.0/no-jre/SenchaCmd-6.5.0-linux-amd64.sh.zip && \
     unzip -p /tmp/cmd.run.zip > /tmp/cmd-install.run && \
     chmod +x /tmp/cmd-install.run && \
     /tmp/cmd-install.run -q -dir /usr/local/bin/sencha && \
