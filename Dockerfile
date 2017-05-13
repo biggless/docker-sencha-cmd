@@ -1,4 +1,4 @@
-FROM ibmjava:jre-alpine
+FROM ibmjava:latest
 
 RUN apk --no-cache --update upgrade
 RUN apk --no-cache add curl
