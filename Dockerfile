@@ -1,5 +1,5 @@
 FROM ibmjava:latest
-RUN apt-get update && apt-get install -y curl unzip && \
+RUN apt-get update && apt-get install -y curl unzip libfontconfig1 && \
     curl -Lo /tmp/cmd.run.zip http://cdn.sencha.com/cmd/6.5.0/no-jre/SenchaCmd-6.5.0-linux-amd64.sh.zip && \
     unzip -p /tmp/cmd.run.zip > /tmp/cmd-install.run && \
     chmod +x /tmp/cmd-install.run && \
